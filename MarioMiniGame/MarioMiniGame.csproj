@@ -1,0 +1,154 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.3.11"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.3.11"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.11"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.11"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.3.11">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="NAudio" Version="2.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Image\BachGroundGameOver.png" />
+      <Content Include="Image\Animation_Coin\Coin.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Image\BachGroundGameOver.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\BackGroundGame.png" />
+      <Content Include="Image\BackGroundGame.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Update="Image\BackGroundMenu.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="Image\Coin.png" />
+      <None Remove="Image\Coin11.png" />
+      <None Update="Image\ground.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="Image\Heart.png" />
+      <Content Include="Image\Heart.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Update="Image\Player_Animation\Player_Idle.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Player_Animation\Player_run1.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Player_Animation\Player_run2.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Player_Animation\Player_run3.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="Image\Animation_Coin\Coin.png" />
+      <None Remove="Image\Animation_Coin\Coin_run1.png" />
+      <None Remove="Image\Animation_Coin\Coin_run2.png" />
+      <None Remove="Image\Animation_Coin\Coin_run3.png" />
+      <None Remove="Image\Animation_Coin\Coin_run4.png" />
+      <None Remove="Image\Animation_Coin\Coin_run5.png" />
+      <None Remove="Image\Animation_Coin\Coin_run6.png" />
+      <None Remove="Image\Animation_Coin\Coin1.png" />
+      <Content Include="Image\Animation_Coin\Coin1.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\Animation_Coin\Coin2.png" />
+      <Content Include="Image\Animation_Coin\Coin2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\Animation_Coin\Coin3.png" />
+      <Content Include="Image\Animation_Coin\Coin3.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\Animation_Coin\Coin4.png" />
+      <Content Include="Image\Animation_Coin\Coin4.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\Animation_Coin\Coin5.png" />
+      <Content Include="Image\Animation_Coin\Coin5.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\Animation_Coin\Coin6.png" />
+      <Content Include="Image\Animation_Coin\Coin6.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Update="Image\Animation_Player\Player_Idle.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Player\Player_run1.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Player\Player_run2.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Player\Player_run3.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Enemy\Enemy.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Enemy\Enemy1.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Enemy\Enemy2.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Enemy\Enemy3.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="Image\Animation_Key\Key.png" />
+      <Content Include="Image\Animation_Key\Key.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\BackGroundVictory.png" />
+      <Content Include="Image\BackGroundVictory.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\Sound_Background\MusicBackGround.wav" />
+      <None Remove="Image\Sound_Background\MusicBackGround.mp3" />
+      <None Remove="Image\Sound_Game\MusicBackGround.wav" />
+      <None Remove="Image\Game_Sound\MusicBackGround.wav" />
+      <Content Include="Image\Game_Sound\MusicBackGround.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Image\Game_Sound\Coin.wav" />
+      <Content Include="Image\Game_Sound\Coin.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Update="Image\Animation_Jump\Jump1.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Jump\Jump2.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Jump\Jump3.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Image\Animation_Jump\Jump4.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="Image\Game_Sound\Jump.wav" />
+      <Content Include="Image\Game_Sound\Jump.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Image\Animation_Key\" />
+    </ItemGroup>
+</Project>

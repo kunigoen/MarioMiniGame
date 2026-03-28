@@ -1,0 +1,102 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MarioMiniGame.MainWindow"
+        Width="800" Height="450"
+        Title="Mario Mini">
+    <Grid>
+        <Image Source="C:\Users\laptop\RiderProjects\MarioMiniGame\MarioMiniGame\Image/BackGroundMenu.png"
+               Stretch="Fill"/>
+            <StackPanel x:Name="MenuPanel"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Spacing="20">
+
+            <TextBlock Text="MINI MARIO"
+                       FontSize="60"
+                       HorizontalAlignment="Center"/>
+
+            <Button Content="Start Game"
+                    Click="StartGame_Click"
+                    Width="150"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="20"/>
+                    
+            <Button Content="Exit"
+                    Click="ExitGame_Click"
+                    Width="150"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="20"/>
+        </StackPanel>
+
+        <Canvas x:Name="GameCanvas"
+                Background="LightBlue"
+                IsVisible="False"/>
+        <TextBlock x:Name="ScoreText"
+                   Text="Score 🪙: 0"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Foreground="Gold"
+                   Canvas.Left="10"
+                   Canvas.Top="50"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"/>
+        <Grid x:Name="GameOverPanel" IsVisible="False">
+            <Image Source="C:\Users\laptop\RiderProjects\Mario Mini\Mario Mini\Image/BachGroundGameOver.png"
+                   Stretch="Fill"/>
+            <StackPanel x:Name="MenuEnd"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Spacing="20">
+
+                <TextBlock Text="GAME OVER"
+                           FontSize="60"
+                           HorizontalAlignment="Center"/>
+
+                <Button Content="Play Again"
+                        Click="StartGame_Click"
+                        Width="150"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="20"/>
+                    
+                <Button Content="Exit"
+                        Click="ExitGame_Click"
+                        Width="150"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="20"/>
+            </StackPanel> 
+        </Grid>
+        <Grid x:Name="WinPanel" IsVisible="False">
+                <Image Source="C:\Users\laptop\RiderProjects\MarioMiniGame\MarioMiniGame\Image/BackGroundVictory.png"
+                       Stretch="Fill"/>
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Spacing="20">
+                        <TextBlock Text="YOU WIN"
+                                   FontSize="60"
+                                   HorizontalAlignment="Center"/>
+                        <Button Content="Play Again"
+                                Click="StartGame_Click"
+                                Width="150"
+                                HorizontalAlignment="Center"
+                                HorizontalContentAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontSize="20"/>
+                        <Button Content="Exit"
+                                Click="ExitGame_Click"
+                                Width="150"
+                                HorizontalAlignment="Center"
+                                HorizontalContentAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontSize="20"/>
+                </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
