@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarioMiniGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7abdeff6f9edde721f826f67935dd9b13b480e13")]
 [assembly: System.Reflection.AssemblyProductAttribute("MarioMiniGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MarioMiniGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

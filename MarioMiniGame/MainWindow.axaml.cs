@@ -4,6 +4,7 @@ using Avalonia.Threading;
 using System;
 using MarioMiniGame.Game;
 using Avalonia.Interactivity;
+using System.Diagnostics;
 
 namespace MarioMiniGame;
 
@@ -13,6 +14,8 @@ public partial class MainWindow : Window
 
     GameController game;
     bool isGameStarted = false;
+    private int frameCount = 0;
+    private Stopwatch fpsTimer = new Stopwatch();
 
     public MainWindow()
     {
@@ -38,6 +41,19 @@ public partial class MainWindow : Window
 
         game.Update();
         ScoreText.Text = $"Score 🪙: {game.Score}";
+        
+        // 👉 FPS 
+        frameCount++;
+
+        if (fpsTimer.ElapsedMilliseconds >= 1000)
+        {
+            int fps = frameCount;
+
+            FPSText.Text = $"FPS: {fps}";
+
+            frameCount = 0;
+            fpsTimer.Restart();
+        }
     }
 
     void OnKeyDown(object? sender, KeyEventArgs e)
@@ -58,6 +74,11 @@ public partial class MainWindow : Window
         GameOverPanel.IsVisible = false; // reset Game Over
         WinPanel.IsVisible = false;
         GameCanvas.IsVisible = true;
+        ScoreText.IsVisible = true;
+        
+        fpsTimer.Restart();
+        frameCount = 0;
+        FPSText.IsVisible = true;
         
         isGameStarted = true;
         game.Reset();
@@ -75,6 +96,7 @@ public partial class MainWindow : Window
         GameCanvas.IsVisible = false;
         GameOverPanel.IsVisible = true;
         isGameStarted = false;
+        FPSText.IsVisible = false;
         game.StopGame(); 
     }
     void ShowWin()
@@ -83,6 +105,7 @@ public partial class MainWindow : Window
         GameCanvas.IsVisible = false;
         MenuPanel.IsVisible = false;
         GameOverPanel.IsVisible = false;
+        FPSText.IsVisible = false;
         WinPanel.IsVisible = true;
         game.StopGame();
     }

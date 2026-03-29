@@ -4,7 +4,7 @@
         Width="800" Height="450"
         Title="Mario Mini">
     <Grid>
-        <Image Source="C:\Users\laptop\RiderProjects\MarioMiniGame\MarioMiniGame\Image/BackGroundMenu.png"
+        <Image Source="D:\Career\Project\MarioMiniGame\MarioMiniGame\Image/BackGroundMenu.png" 
                Stretch="Fill"/>
             <StackPanel x:Name="MenuPanel"
                         VerticalAlignment="Center"
@@ -43,9 +43,20 @@
                    Canvas.Left="10"
                    Canvas.Top="50"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Top"/>
+                   VerticalAlignment="Top"
+                   IsVisible="False"/>
+        <TextBlock x:Name="FPSText"
+                   Text="FPS: 0"
+                   FontSize="16"
+                   Foreground="Black"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Margin="0,10,10,0"
+                   IsVisible="False"/>
+        
+        
         <Grid x:Name="GameOverPanel" IsVisible="False">
-            <Image Source="C:\Users\laptop\RiderProjects\Mario Mini\Mario Mini\Image/BachGroundGameOver.png"
+            <Image Source="D:\Career\Project\MarioMiniGame\MarioMiniGame\Image/BachGroundGameOver.png"
                    Stretch="Fill"/>
             <StackPanel x:Name="MenuEnd"
                         VerticalAlignment="Center"
@@ -74,7 +85,7 @@
             </StackPanel> 
         </Grid>
         <Grid x:Name="WinPanel" IsVisible="False">
-                <Image Source="C:\Users\laptop\RiderProjects\MarioMiniGame\MarioMiniGame\Image/BackGroundVictory.png"
+                <Image Source="D:\Career\Project\MarioMiniGame\MarioMiniGame\Image/BackGroundVictory.png"
                        Stretch="Fill"/>
                 <StackPanel VerticalAlignment="Center"
                             HorizontalAlignment="Center"

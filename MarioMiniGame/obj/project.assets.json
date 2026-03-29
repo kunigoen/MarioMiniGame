@@ -1563,19 +1563,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\laptop\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laptop\\RiderProjects\\MarioMiniGame\\MarioMiniGame\\MarioMiniGame.csproj",
+      "projectUniqueName": "D:\\Career\\Project\\MarioMiniGame\\MarioMiniGame\\MarioMiniGame.csproj",
       "projectName": "MarioMiniGame",
-      "projectPath": "C:\\Users\\laptop\\RiderProjects\\MarioMiniGame\\MarioMiniGame\\MarioMiniGame.csproj",
-      "packagesPath": "C:\\Users\\laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laptop\\RiderProjects\\MarioMiniGame\\MarioMiniGame\\obj\\",
+      "projectPath": "D:\\Career\\Project\\MarioMiniGame\\MarioMiniGame\\MarioMiniGame.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\Career\\Project\\MarioMiniGame\\MarioMiniGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\laptop\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -1646,7 +1646,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.104/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
